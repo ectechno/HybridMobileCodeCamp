@@ -1,0 +1,140 @@
+body {
+    text-transform: none !important;
+}
+/*General*/
+/*
+For page transition to be smooth.
+https://demos.jquerymobile.com/1.2.0/docs/pages/page-transitions.html
+*/
+
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}
+/*Splash Screen*/
+
+.event.listening {
+    background-color: transparent !important;
+}
+
+.mid-screen-logo {
+    padding-top: 180px;
+    width: 100px;
+}
+
+.mid-screen-image {
+    width: 240px;
+    padding-left: 35%;
+}
+
+.event {
+    margin: 0px 0px !important;
+    padding: 2px 0px !important;
+}
+/*End Splash Screen*/
+/*Login Screen*/
+
+.login-form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.login-field {
+    height: 40px;
+}
+
+.copyrights {
+    text-align: center;
+    margin-top: 80px;
+}
+/*Header Buttons*/
+
+.header-button {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    top: 0px !important;
+}
+/*Internal Pages*/
+
+[data-role=page] {
+    height: 100% !important;
+    position: relative !important;
+}
+
+[data-role=footer] {
+    bottom: 0;
+    position: absolute !important;
+    top: auto !important;
+    width: 100%;
+    background: #FF6600 !important;
+}
+
+.ui-page .ui-header {
+    background: #FF6600 !important;
+}
+
+.ui-overlay-a,
+.ui-page-theme-a,
+.ui-page-theme-a .ui-panel-wrapper {
+    background-color: antiquewhite !important;
+}
+
+.speaker-details {
+    margin: 0 auto;
+}
+
+.speaker-profile {
+    display: inline;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    float: left;
+    padding: 5px;
+    text-align: center;
+}
+
+.speaker-image {
+    width: 100px;
+    height: 120px;
+}
+
+.speaker-handler {
+    color: silver;
+}
+
+#event-details {
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#left-panel {
+    background-color: antiquewhite;
+}
+
+.center-button-group {
+    text-align: center;
+}
+
+.camera-append-image {
+    padding-left: 10px;
+}
+/*End Internal Pages*/
+/*Popup*/
+
+.basic-popup {
+    background-color: antiquewhite !important;
+    text-align: center;
+}
+
+.popup-content {
+    padding: 20px;
+}
+
+.popup-content-points {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.popup-ok-button {
+    background-color: #FF6600 !important;
+}

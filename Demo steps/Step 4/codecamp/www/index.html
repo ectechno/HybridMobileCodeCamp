@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		
+		<!-- Style sheets -->
+		<link rel="stylesheet" href="css/vendor/jquery.mobile-1.4.5.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" href="css/app.css">
+        
+        <title>Hello World</title>
+    </head>
+    <body id="deviceready">
+
+	<!--Splash Page-->
+    <div class="event listening">        
+		Splash Screen		
+    </div>
+    <!--End Splash Page-->
+	
+	<!--Main Content Area-->
+    <section class="event received">
+	
+		<!-- Login Page -->
+		<div data-role="page" id="login-page">
+			<div role="main" class="ui-content">			
+				Login Screen			
+				<div>
+					<a href="" id="login-button" data-transition="none" data-corners="true" data-role="button">Log in</a>
+				</div>
+				
+				<div class="copyrights">
+					Copyright &#169; 2015 99X Technology &#124; Version 1.0.0
+				</div>
+			</div>
+			
+		</div>
+		<!-- End Login Page -->
+		
+		<!--Home Page-->
+		<div data-role="page" id="home-page">
+			<div data-role="header">
+				<a class="header-button" id="open-list-items-button" href="#" data-icon="grid" class="ui-btn-left" data-iconpos="notext" data-transition="none"></a>
+				<h1>Hybrid Mobile Day</h1>
+				<a class="header-button" href="#camera-page" data-icon="camera" class="ui-btn-right" data-iconpos="notext" data-transition="flip"></a>
+			</div>
+			
+			<div data-role="main" class="ui-content">
+			Home Page
+			</div>
+			
+		</div>
+		<!-- End Home Page-->
+		
+		<!--Camera Page-->
+		<div data-role="page" id="camera-page">
+
+		<div data-role="header">
+			<h1>Compello Dev Day</h1>
+			<a class="header-button" href="#home-page" data-icon="home" class="ui-btn-right" data-iconpos="notext" data-transition="flip"></a>
+		</div>
+
+		<div data-role="main" class="ui-content">
+			Camera Page Content			
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h2>&copy; 99X Technology 2015</h2>
+		</div>
+
+		</div>
+		<!--End Camera Page-->
+	
+	</section>
+    <!--End Main Content Area-->
+
+	<!-- scripts -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/vendor/jquery-1.11.1.js"></script>
+    <script src="js/vendor/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/camera.js"></script>
+
+	</body>
+</html>

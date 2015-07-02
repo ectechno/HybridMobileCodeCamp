@@ -1,0 +1,46 @@
+Environment Setup:
+https://cordova.apache.org/docs/en/4.0.0/guide_platforms_android_index.md.html
+
+My Guide - https://github.com/razmik/nsbm-codecamp/wiki/Hybrid-Mobile-App-Development---Getting-Started-Guide
+
+1. Create the app using cordova create. Add android platform. Update the config file.
+	cordova create codecamp com.codecamp.hybrid "Hybrid Codecamp"
+	cordova platform add android
+	Explain the code structure. (index.html, js, css)
+	Special mention about device ready events.
+	Copy the corodva.js file to www folder. It's under platform -> android -> assets -> www
+	Demo.
+
+2. Development Resources
+	jQM Demos - http://jquerymobile.com/demos/
+	jQuery Mobile API - https://api.jquerymobile.com
+	 
+3. Structuring
+	3.1 Create initial structure of the app
+	3.2 Add splash screen and login screen with jQM
+	3.3 Add basic screen layouts.
+	3.4 Add navigation.
+
+4. Implement Screens
+	4.1 Splash and Login Screens
+	4.2 Home page. Add images. Add Popups widget.
+	4.3 List widget. Left swipe menu. 
+	4.4 Camera page. Camera icons.
+	
+5. Plugins
+	5.1 Cordova plugin registry.
+	5.2 Add camera plugin. - cordova plugin add cordova-plugin-camera
+	5.3 Create camera.js. Add plugin code and go through plugin API.
+	
+6. Build
+	Build the app.
+	Add the apk to mobile and test.
+	
+7. Deploy
+	Create keystore file.
+	Tell the importance of keystore file.
+	cordova build android --release
+	Test with mobile phone.
+	Publish to GooglePlay.
+	
+8. Same app in ionic.
