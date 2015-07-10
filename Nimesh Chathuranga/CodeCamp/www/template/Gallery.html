@@ -1,0 +1,20 @@
+<!--gallery start-->
+<div ng-controller="GalleryCtrl" style="background-color: #ecf0f1;">
+    <ion-header-bar class="bar bar-header bar-dark" >
+        <button class="button button-icon ion-android-arrow-back" ui-sref="Home" ng-click="clear('back')"></button>
+        <h1 class="title">{{myTitle}}</h1>
+        <button class="button button-icon icon ion-camera" ui-sref="Camera"></button>
+    </ion-header-bar>
+    <ion-content>
+
+        <div id="Gallery" >
+            <div ng-repeat="image in album" class="gallery-item">
+                <a href="{{image}}">
+                    <img ng-src="{{image}}" alt="{{image}} {{$index}}" style="width:300px;"/>
+                </a>
+            </div>
+
+        </div>
+    </ion-content>
+</div>
+<!--gallery end-->

@@ -1,0 +1,37 @@
+[
+  {
+    "name" 		      : "Kishan Navarathna",
+    "disc"	  : "Associate Test Automation Lead at 99X Technology, Co-founder of the Colombo Selenium Meetup, Co-founder of SeShell.",
+    "image"           :"img/profiles/kishan.png",
+    "link"            :"  https://lk.linkedin.com/in/kishannavaratne"
+  },
+  {
+    "name" 		      : "Kosala Nuwan Perera",
+    "disc"	  : "Senior Developer at 99X Technology, Hybrid Mobile Developer, UX Evangelist, Co Founder of Yeetup.com.",
+    "image"           :"img/profiles/kosala.jpg",
+    "link"            :" https://lk.linkedin.com/in/kosalanuwan"
+  },
+  {
+    "name" 		      : "Rashmika Nawaratne",
+    "disc"	  : "Executive Director (CEO) at SL2College, Software Engineer at 99X Technology, Hybrid Mobile Developer.",
+    "image"           :"img/profiles/rashmika.jpg",
+    "link"            :" https://lk.linkedin.com/in/rashmikanawaratne"
+  },{
+  "name" 		      : "Suranga Bandara",
+  "disc"	  : "Tech Lead at 99X Technology, Senior Developer, ScrumMaster.",
+  "image"             :"img/profiles/suranga.jpg",
+  "link"              :" https://lk.linkedin.com/in/surangab"
+},
+  {
+    "name" 		      : "Tharindra Jayamaha",
+    "disc"	  : " QA Lead at 99X Technology, QA Consultant.",
+    "image"           :"img/profiles/tharindra.jpg",
+    "link"            :" https://lk.linkedin.com/in/tharindraj"
+  },
+  {
+    "name" 		      : "Ruzaik Refai",
+    "disc"	  : "Automation Engineer at 99X Technology, Solution Developer.",
+    "image"           :"img/profiles/ruzaik.png",
+    "link"            :"https://lk.linkedin.com/in/ruzaik"
+  }
+]
