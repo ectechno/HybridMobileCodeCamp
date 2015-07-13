@@ -1,0 +1,24 @@
+<div class="row row-top" style="text-align:center; margin-top:50px;">
+    <div class="col col-center">
+        <img src="img/logo.png" width="200px;" alt="logo">
+    </div>
+</div>
+
+<div class="row responsive-sm" ng-controller="LoginCtrl">
+    <div class="list list-inset col col-center" id="loginForm">
+        <label class="item item-input">
+            <input type="text" ng-model="user.username" placeholder="Username - dinuka">
+          </label>
+        <label class="item item-input">
+            <input type="text" ng-model="user.password" placeholder="Password - 123">
+        </label>
+        <button class="button button-block icon-right ion-log-in button-assertive" ng-click="login(user)">Log in</button>
+    </div>
+</div>
+
+<div class="bar bar-footer bar-stable">
+    <div class="title">
+        <h6>Copyright &#169; 2015 99X Technology &#124; Version 1.0.0</h6>
+    </div>
+</div>
+</div>
