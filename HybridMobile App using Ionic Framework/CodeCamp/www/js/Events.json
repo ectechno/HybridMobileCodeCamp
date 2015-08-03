@@ -1,0 +1,18 @@
+[
+  {
+    "evname" 		 : "CodeCamp",
+    "evdiscription"	 : "Hybrid Mobile Application Development Workshop.",
+    "evimage"        : "htbr.png"
+  },
+  {
+    "evname" 		 : "HOW Did this ?",
+    "evdiscription"	 : "Organized by NSBM DevOps in collaboration with 99X.",
+    "evimage"        :"devopz.jpg"
+  },
+  {
+    "evname" 		 : "About 99X",
+    "evdiscription"	 : "this company self-organized, empowered teams are motivated, customer focused, ownership driven and agile. They focus on collaborative engagement, considering value and innovation in every aspect that they deal with",
+    "evimage"        :"99logo.png"
+  }
+    
+]
