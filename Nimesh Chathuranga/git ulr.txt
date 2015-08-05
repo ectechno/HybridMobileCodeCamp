@@ -1,1 +1,3 @@
 https://github.com/nimeshc64/HybridMobileApp
+
+https://github.com/nimeshc64/EventApp.git
