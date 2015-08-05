@@ -113,3 +113,9 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+
+.ui-mobile a img, .ui-mobile fieldset {
+    border-width: 0;
+    border-radius: 56px;
+}

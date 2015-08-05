@@ -122,6 +122,7 @@ https://demos.jquerymobile.com/1.2.0/docs/pages/page-transitions.html
 .basic-popup {
     background-color: antiquewhite !important;
     text-align: center;
+
 }
 
 .popup-content {
@@ -133,8 +134,22 @@ https://demos.jquerymobile.com/1.2.0/docs/pages/page-transitions.html
     padding-left: 10px;
     font-size: 13px;
     font-weight: 800;
+    
 }
 
 .popup-ok-button {
     background-color: #FF6600 !important;
+}
+
+
+.ui-page .ui-header {
+    background: #78DA6C !important;
+}
+
+h2.ui-title {
+    background: #74CA69;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    background-color: rgba(128, 183, 123, 0.2) !important;
 }

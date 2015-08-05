@@ -1,49 +1,241 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <link rel="stylesheet" href="css/vendor/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css">
+    
+
+    <title>Hybrid Mobile Day</title>
+</head>
+
+<body id="deviceready" class="platform-android platform-cordova platform-webview">
+
+    <div class="event listening">
+        <div id="logo-login" class="mid-screen-logo" style="text-align: center; margin-left: 30px;">
+            <img class="mid-screen-image" src="img/logo.png" height="250" width="200" alt="KriP Industries logo Logo">
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    </div>
+    
+    <section class="event received">
+
+		<!-- Login Page -->
+      <div data-role="page" id="login-page">
+            <div role="main" class="ui-content">
+                <div id="logo-login" style="text-align:center; margin: 30px;">
+                    <img width="200px;" src="img/logo.png" alt="99X Technology Code Camp">
+                </div>
+
+                <form class="login-form">
+                    <div class="fieldcontain" data-role="fieldcontain">
+                        <input id="login-username" class="login-field" placeholder="Username" type="text" name="login" data-clear-btn="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                    </div>
+                    <div class="fieldcontain" data-role="fieldcontain">
+                        <input id="login-password" class="login-field" placeholder="Password" type="password" name="pw" data-clear-btn="true" />
+                    </div>
+                    <div>
+                        <a href="" id="login-button" data-transition="none" data-corners="true" data-role="button">Log in</a>
+                    </div>
+                </form>
+                <div class="copyrights">
+                    Copyright &#169; 2015 KriP TeaM &#124; Version 1.0.0
+                </div>
+            </div>
+            <!--Login Failed PopUp-->
+            <div data-role="popup" class="basic-popup" id="login-error-popup" data-overlay-theme="b">
+                <h3 class="ui-title">Authentication Failure</h3>
+                <p class="popup-content">User credentials provided is not correct. Please try again.</p>
+                <div>
+                    <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
+                </div>
+            </div>
+        
+            <div data-role="popup" class="basic-popup" id="login-error-popup" data-overlay-theme="b">
+                <h3 class="ui-title">Authentication Failure</h3>
+                <p class="popup-content">User credentials provided is not correct. Please try again.</p>
+                <div>
+                    <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
+                </div>
+            </div>
+            <!--End Login Failed PopUp-->
+        </div>
+		<!-- End Login Page -->
+		
+        <!--Home Page-->
+        <div data-role="page" id="home-page">
+
+            <div data-role="header">
+                <a class="header-button" id="open-list-items-button" href="#" data-icon="grid" class="ui-btn-left" data-iconpos="notext" data-transition="none"></a>
+                <h1>KRIP TeaM HybridApp</h1>
+                <a class="header-button" href="#camera-page" data-icon="camera" class="ui-btn-right" data-iconpos="notext" data-transition="flip"></a>
+            </div>
+
+            <div data-role="main" class="ui-content">
+
+                <div id="event-details">
+                    <p>KriP KS Hybrid Mobile Application </p>
+                </div>
+
+                <div id="speaker-details">
+                    <a href="#kash-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
+                        <img class="speaker-image" src="img/profiles/ks.jpg" alt="KavindaRochana">
+                        <br />@kavindarochana
+                    </a>
+                    <a href="#rk-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
+                        <img class="speaker-image" src="img/profiles/rk.jpg" alt="Rajith">
+                        <br />@rajithkonara
+                    </a>
+                    <a href="#iz-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
+                        <img class="speaker-image" src="img/profiles/iz.jpg" alt="Rashmika">
+                        <br />@isuruchathuranga
+                    </a>
+
+                     <a href="#4k-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
+                        <img class="speaker-image" src="img/profiles/4k.jpg" alt="Rashmika">
+                        <br />@pramod4k
+                    </a>
+                   
+                   
+                </div>
+
+                <!--KasH-->
+                <div data-role="popup" class="basic-popup" id="kash-popup" data-overlay-theme="b">
+                    <h3 class="ui-title">Kavinda Rochana Abeywickrama</h3>
+                    <img class="speaker-image" src="img/profiles/ks.jpg" alt="KavindaRochana">
+                    <p class="popup-content">
+                        CEO, Co-founder, Web Developer & Mobile Application Developer at KriP TeaM
+                    </p>
+                    <p class="popup-content-points">
+                        https://facebook.com/kavindarochana
+                        <br/>@kavindarochana
+                    </p>
+                    <div>
+                        <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
+                    </div>
+                </div>
+                <!--End KasH-->
+                <!--Rajith-->
+                <div data-role="popup" class="basic-popup" id="rk-popup" data-overlay-theme="b">
+                    <h3 class="ui-title">Rajith Konara</h3>
+                    <img class="speaker-image" src="img/profiles/rk.jpg" alt="Rajith">
+                    <p class="popup-content">
+                        CEO, Co-founder and Programmer at KriP TeaM
+                    </p>
+                    <p class="popup-content-points">
+                        https://www.facebook.com/rajith.anuranga.3?fref=ts
+                        <br/>@rajithkonara
+                    </p>
+                    <div>
+                        <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
+                    </div>
+                </div>
+                <!--End Rajith-->
+                <!--Isuru-->
+                <div data-role="popup" class="basic-popup" id="iz-popup" data-overlay-theme="b">
+                    <h3 class="ui-title">Isuru Bandara</h3>
+                    <img class="speaker-image" src="img/profiles/iz.jpg" alt="isuru">
+                    <p class="popup-content">
+                        CEO, Co-founder , Web Developer and Programmer at KriP TeaM
+                    </p>
+                    <p class="popup-content-points">
+                        https://www.facebook.com/ichathux?fref=ts
+                        <br/>@isuruchathuranga
+                    </p>
+                    <div>
+                        <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
+                    </div>
+                </div>
+                <!--End Isuru-->
+                <!--Pramod-->
+                <div data-role="popup" class="basic-popup" id="4k-popup" data-overlay-theme="b">
+                    <h3 class="ui-title">Pramod Weerasinghe</h3>
+                    <img class="speaker-image" src="img/profiles/4k.jpg" alt="Pramod">
+                    <p class="popup-content">
+                        CEO, Co-founder , Web Developer and Programmer at KriP TeaM
+                    </p>
+                    <p class="popup-content-points">
+                        https://www.facebook.com/pramod4lk?fref=ts
+                        <br/>@pramod4k
+                    </p>
+                    <div>
+                        <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
+                    </div>
+                </div>
+                <!--End Pramod-->
+            
+
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h2>&copy; KriP Industries 2015</h2>
+            </div>
+
+            <div data-role="panel" id="left-panel" data-display="reveal">
+                <div>
+                    <ul data-role="listview" data-filter="true" data-filter-placeholder="Search" data-inset="true" data-autodividers="true">
+                        <li><a class="dev-list-item" href="#kash-popup">Kavinda Rochana</a>
+                        </li>
+                        <li><a class="dev-list-item" href="#rk-popup">Rajith Konara</a>
+                        </li>
+                        <li><a class="dev-list-item" href="#iz-popup">Isuru Bandara</a>
+                        </li>
+                        <li><a class="dev-list-item" href="#4k-popup">Pramod Weerasinghe</a>
+                       
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="popup" class="basic-popup" id="developer-selected-popup" data-overlay-theme="b">
+                <h3 class="ui-title">Selected Developer</h3>
+                <p id="selected-dev-name" class="popup-content">You have selected a developer. Press OK to continue.</p>
+                <div>
+                    <a href="#" class="popup-ok-button" data-role="button" data-inline="true" data-corners="true" data-rel="back" data-transition="fade">OK</a>
+                </div>
+            </div>
+
+        </div>
+        <!--End Home Page-->
+
+        <!--Camera Page-->
+        <div data-role="page" id="camera-page">
+
+            <div data-role="header">
+                <h1>KriP TeaM KS Dev Day</h1>
+                <a class="header-button" href="#home-page" data-icon="home" class="ui-btn-right" data-iconpos="notext" data-transition="flip"></a>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div class="center-button-group">
+                    <a id="capture-button" href="#" data-role="button" data-inline="true" data-corners="true">Camera</a>
+                    <a id="capture-file-button" href="#" data-role="button" data-inline="true" data-corners="true">Gallery</a>
+                    <a id="clear-button" href="#" data-role="button" data-inline="true" data-corners="true">Clear</a>
+                </div>
+                <div id="image-container" class="center-button-group"></div>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h2>&copy; KriP Industries 2015</h2>
+            </div>
+
+        </div>
+        <!--End Camera Page-->
+
+    </section>
+    <!--End Main Content Area-->
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/vendor/jquery-1.11.1.js"></script>
+    <script src="js/vendor/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/camera.js"></script>
+</body>
+
 </html>
