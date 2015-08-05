@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.codecamp.hybrid" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Hybrid-Codecamp</name>
+    <name>KS KriP TeaM HybridApp</name>
     <description>
-        Hybrid Mobile Application Development session for NSBM conducted by 99X Technology.
+        Hybrid Mobile Application KriP TeaM
     </description>
-    <author email="rashmikan@99x.lk" href="www.99xtechnology.com">
-        99X Technology
+    <author email="kavindarochana@gmail.com" href="www.facebook.com/kavindarochana">
+        KriP Industries
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" version="1" />

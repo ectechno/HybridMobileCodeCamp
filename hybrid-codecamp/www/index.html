@@ -1,53 +1,33 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
 
 <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
     <link rel="stylesheet" href="css/vendor/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" href="css/app.css">
+    
 
     <title>Hybrid Mobile Day</title>
 </head>
 
 <body id="deviceready">
 
-    <!--Splash Page-->
     <div class="event listening">
         <div id="logo-login" class="mid-screen-logo" style="text-align: center; margin-left: 30px;">
-            <img class="mid-screen-image" src="img/logo.png" alt="99X Technology Logo">
+            <img class="mid-screen-image" src="img/logo.png" height="250" width="200" alt="KriP Industries logo Logo">
         </div>
     </div>
-    <!--End Splash Page-->
-
-    <!--Main Content Area-->
+    
     <section class="event received">
 
 		<!-- Login Page -->
-        <div data-role="page" id="login-page">
+      <div data-role="page" id="login-page">
             <div role="main" class="ui-content">
                 <div id="logo-login" style="text-align:center; margin: 30px;">
                     <img width="200px;" src="img/logo.png" alt="99X Technology Code Camp">
@@ -65,10 +45,18 @@
                     </div>
                 </form>
                 <div class="copyrights">
-                    Copyright &#169; 2015 99X Technology &#124; Version 1.0.0
+                    Copyright &#169; 2015 KriP TeaM &#124; Version 1.0.0
                 </div>
             </div>
             <!--Login Failed PopUp-->
+            <div data-role="popup" class="basic-popup" id="login-error-popup" data-overlay-theme="b">
+                <h3 class="ui-title">Authentication Failure</h3>
+                <p class="popup-content">User credentials provided is not correct. Please try again.</p>
+                <div>
+                    <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
+                </div>
+            </div>
+        
             <div data-role="popup" class="basic-popup" id="login-error-popup" data-overlay-theme="b">
                 <h3 class="ui-title">Authentication Failure</h3>
                 <p class="popup-content">User credentials provided is not correct. Please try again.</p>
@@ -85,165 +73,121 @@
 
             <div data-role="header">
                 <a class="header-button" id="open-list-items-button" href="#" data-icon="grid" class="ui-btn-left" data-iconpos="notext" data-transition="none"></a>
-                <h1>Hybrid Mobile Day</h1>
+                <h1>KRIP TeaM HybridApp</h1>
                 <a class="header-button" href="#camera-page" data-icon="camera" class="ui-btn-right" data-iconpos="notext" data-transition="flip"></a>
             </div>
 
             <div data-role="main" class="ui-content">
 
                 <div id="event-details">
-                    <p>Hybrid Mobile Application Development</p>
+                    <p>KriP KS Hybrid Mobile Application </p>
                 </div>
 
                 <div id="speaker-details">
-                    <a href="#kishan-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
-                        <img class="speaker-image" src="img/profiles/kishan.png" alt="Kishan">
-                        <br />@k_navaratne
+                    <a href="#kash-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
+                        <img class="speaker-image" src="img/profiles/ks.jpg" alt="KavindaRochana">
+                        <br />@kavindarochana
                     </a>
-                    <a href="#kosala-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
-                        <img class="speaker-image" src="img/profiles/kosala.jpg" alt="Kosala">
-                        <br />@kosalanuwan
+                    <a href="#rk-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
+                        <img class="speaker-image" src="img/profiles/rk.jpg" alt="Rajith">
+                        <br />@rajithkonara
                     </a>
-                    <a href="#rashmika-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
-                        <img class="speaker-image" src="img/profiles/rashmika.jpg" alt="Rashmika">
-                        <br />@razmik89
+                    <a href="#iz-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
+                        <img class="speaker-image" src="img/profiles/iz.jpg" alt="Rashmika">
+                        <br />@isuruchathuranga
                     </a>
-                    <a href="#suranga-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
-                        <img class="speaker-image" src="img/profiles/suranga.jpg" alt="Suranga">
-                        <br />@SurangaBandara
+
+                     <a href="#4k-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
+                        <img class="speaker-image" src="img/profiles/4k.jpg" alt="Rashmika">
+                        <br />@pramod4k
                     </a>
-                    <a href="#tharindra-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
-                        <img class="speaker-image" src="img/profiles/tharindra.jpg" alt="Tharindra">
-                        <br />@tharindrajema
-                    </a>
-                    <a href="#ruzaik-popup" data-rel="popup" class="speaker-profile" data-position-to="window">
-                        <img class="speaker-image" src="img/profiles/ruzaik.png" alt="Ruzaik">
-                        <br />@ruzaik
-                    </a>
+                   
+                   
                 </div>
 
-                <!--Kishan-->
-                <div data-role="popup" class="basic-popup" id="kishan-popup" data-overlay-theme="b">
-                    <h3 class="ui-title">Kishan Navaratne</h3>
-                    <img class="speaker-image" src="img/profiles/kishan.png" alt="Kishan">
+                <!--KasH-->
+                <div data-role="popup" class="basic-popup" id="kash-popup" data-overlay-theme="b">
+                    <h3 class="ui-title">Kavinda Rochana Abeywickrama</h3>
+                    <img class="speaker-image" src="img/profiles/ks.jpg" alt="KavindaRochana">
                     <p class="popup-content">
-                        Associate Test Automation Lead at 99X Technology, Co-founder of the Colombo Selenium Meetup, Co-founder of SeShell.
+                        CEO, Co-founder, Web Developer & Mobile Application Developer at KriP TeaM
                     </p>
                     <p class="popup-content-points">
-                        https://lk.linkedin.com/in/kishannavaratne
-                        <br/>@k_navaratne
+                        https://facebook.com/kavindarochana
+                        <br/>@kavindarochana
                     </p>
                     <div>
                         <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
                     </div>
                 </div>
-                <!--End Kishan-->
-                <!--Kosala-->
-                <div data-role="popup" class="basic-popup" id="kosala-popup" data-overlay-theme="b">
-                    <h3 class="ui-title">Kosala Nuwan Perera</h3>
-                    <img class="speaker-image" src="img/profiles/kosala.jpg" alt="Kosala">
+                <!--End KasH-->
+                <!--Rajith-->
+                <div data-role="popup" class="basic-popup" id="rk-popup" data-overlay-theme="b">
+                    <h3 class="ui-title">Rajith Konara</h3>
+                    <img class="speaker-image" src="img/profiles/rk.jpg" alt="Rajith">
                     <p class="popup-content">
-                        Senior Developer at 99X Technology, Hybrid Mobile Developer, UX Evangelist, Co Founder of Yeetup.com.
+                        CEO, Co-founder and Programmer at KriP TeaM
                     </p>
                     <p class="popup-content-points">
-                        https://lk.linkedin.com/in/kosalanuwan
-                        <br/>@kosalanuwan
+                        https://www.facebook.com/rajith.anuranga.3?fref=ts
+                        <br/>@rajithkonara
                     </p>
                     <div>
                         <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
                     </div>
                 </div>
-                <!--End Kosala-->
-                <!--Rashmika-->
-                <div data-role="popup" class="basic-popup" id="rashmika-popup" data-overlay-theme="b">
-                    <h3 class="ui-title">Rashmika Nawaratne</h3>
-                    <img class="speaker-image" src="img/profiles/rashmika.jpg" alt="Rashmika">
+                <!--End Rajith-->
+                <!--Isuru-->
+                <div data-role="popup" class="basic-popup" id="iz-popup" data-overlay-theme="b">
+                    <h3 class="ui-title">Isuru Bandara</h3>
+                    <img class="speaker-image" src="img/profiles/iz.jpg" alt="isuru">
                     <p class="popup-content">
-                        Executive Director (CEO) at SL2College, Software Engineer at 99X Technology, Hybrid Mobile Developer.
+                        CEO, Co-founder , Web Developer and Programmer at KriP TeaM
                     </p>
                     <p class="popup-content-points">
-                        https://lk.linkedin.com/in/rashmikanawaratne
-                        <br/>@razmik89
+                        https://www.facebook.com/ichathux?fref=ts
+                        <br/>@isuruchathuranga
                     </p>
                     <div>
                         <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
                     </div>
                 </div>
-                <!--End Rashmika-->
-                <!--Suranga-->
-                <div data-role="popup" class="basic-popup" id="suranga-popup" data-overlay-theme="b">
-                    <h3 class="ui-title">Suranga Bandara</h3>
-                    <img class="speaker-image" src="img/profiles/suranga.jpg" alt="Suranga">
+                <!--End Isuru-->
+                <!--Pramod-->
+                <div data-role="popup" class="basic-popup" id="4k-popup" data-overlay-theme="b">
+                    <h3 class="ui-title">Pramod Weerasinghe</h3>
+                    <img class="speaker-image" src="img/profiles/4k.jpg" alt="Pramod">
                     <p class="popup-content">
-                        Tech Lead at 99X Technology, Senior Developer, ScrumMaster.
+                        CEO, Co-founder , Web Developer and Programmer at KriP TeaM
                     </p>
                     <p class="popup-content-points">
-                        https://lk.linkedin.com/in/surangab
-                        <br/>@surangabandara
+                        https://www.facebook.com/pramod4lk?fref=ts
+                        <br/>@pramod4k
                     </p>
                     <div>
                         <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
                     </div>
                 </div>
-                <!--End Suranga-->
-                <!--Tharindra-->
-                <div data-role="popup" class="basic-popup" id="tharindra-popup" data-overlay-theme="b">
-                    <h3 class="ui-title">Tharindra Jayamaha</h3>
-                    <img class="speaker-image" src="img/profiles/tharindra.jpg" alt="Tharindra">
-                    <p class="popup-content">
-                        QA Lead at 99X Technology, QA Consultant.
-                    </p>
-                    <p class="popup-content-points">
-                        https://lk.linkedin.com/in/tharindraj
-                        <br/>@tharindrajema
-                    </p>
-                    <div>
-                        <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
-                    </div>
-                </div>
-                <!--End Tharindra-->
-                <!--Ruzaik-->
-                <div data-role="popup" class="basic-popup" id="ruzaik-popup" data-overlay-theme="b">
-                    <h3 class="ui-title">Ruzaik Refai</h3>
-                    <img class="speaker-image" src="img/profiles/ruzaik.png" alt="Ruzaik">
-                    <p class="popup-content">
-                        Automation Engineer at 99X Technology, Solution Developer.
-                    </p>
-                    <p class="popup-content-points">
-                        https://lk.linkedin.com/in/ruzaik
-                        <br/>@ruzaik
-                    </p>
-                    <div>
-                        <a href="#" data-role="button" class="popup-ok-button" data-corners="true" data-rel="back" data-transition="fade">OK</a>
-                    </div>
-                </div>
-                <!--End Ruzaik-->
+                <!--End Pramod-->
+            
 
             </div>
 
             <div data-role="footer" data-position="fixed">
-                <h2>&copy; 99X Technology 2015</h2>
+                <h2>&copy; KriP Industries 2015</h2>
             </div>
 
             <div data-role="panel" id="left-panel" data-display="reveal">
                 <div>
                     <ul data-role="listview" data-filter="true" data-filter-placeholder="Search" data-inset="true" data-autodividers="true">
-                        <li><a class="dev-list-item" href="#">Chaminda Vithanage</a>
+                        <li><a class="dev-list-item" href="#kash-popup">Kavinda Rochana</a>
                         </li>
-                        <li><a class="dev-list-item" href="#">Kosala Perera</a>
+                        <li><a class="dev-list-item" href="#rk-popup">Rajith Konara</a>
                         </li>
-                        <li><a class="dev-list-item" href="#">Rashmika Nawaratne</a>
+                        <li><a class="dev-list-item" href="#iz-popup">Isuru Bandara</a>
                         </li>
-                        <li><a class="dev-list-item" href="#">Suranga Bandara</a>
-                        </li>
-                        <li><a class="dev-list-item" href="#">Kishan Navaratna</a>
-                        </li>
-                        <li><a class="dev-list-item" href="#">Ruzaik Refai</a>
-                        </li>
-                        <li><a class="dev-list-item" href="#">Tharindra Jayamaha</a>
-                        </li>
-                        <li><a class="dev-list-item" href="#">Yngvar Ugland</a>
-                        </li>
+                        <li><a class="dev-list-item" href="#4k-popup">Pramod Weerasinghe</a>
+                       
                     </ul>
                 </div>
             </div>
@@ -263,7 +207,7 @@
         <div data-role="page" id="camera-page">
 
             <div data-role="header">
-                <h1>Compello Dev Day</h1>
+                <h1>KriP TeaM KS Dev Day</h1>
                 <a class="header-button" href="#home-page" data-icon="home" class="ui-btn-right" data-iconpos="notext" data-transition="flip"></a>
             </div>
 
@@ -277,7 +221,7 @@
             </div>
 
             <div data-role="footer" data-position="fixed">
-                <h2>&copy; 99X Technology 2015</h2>
+                <h2>&copy; KriP Industries 2015</h2>
             </div>
 
         </div>
