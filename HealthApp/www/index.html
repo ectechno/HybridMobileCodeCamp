@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ncCordova/dist/ng.cordova.js"></script> 
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="AppCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-positive">
+        <center><h1 class="title">KripTeam Health App</h1></center>
+      </ion-header-bar>
+      <ion-content class="has-header padding">
+          <div class="list">
+              <div class="item item-input-inset">
+                  <label class="item-input-wrapper">
+                  <input type="text" placeholder="Your Height" ng-model="body.height">
+              </label>
+              </div>
+              <center><button class="button button-small" ng-click="saveHeight()">Set Height</button></center>
+          </div>
+          <center><button class="button button-positive" ng-click="getHeight()">Get Height</button></center>
+          <br>
+          <center>
+          <button class="button button-positive" ng-click="saveWorkouts()">Set Workout Data</button>
+          <button class="button button-positive" ng-click="getWorkouts()">Get Workout Data</button>
+              </center>
+          
+          
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
