@@ -1,0 +1,30 @@
+body {
+ color: darkblue;
+    cursor: url('http://ionicframework.com/img/finger.png'), auto;
+    
+    margin: 0px 0px !important;
+    padding: 2px 0px !important;
+
+}
+
+.login-form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.login-field{
+    height: 50px;
+    margin: 2px;
+}
+
+.login-field2{
+   margin: 6px;
+  
+}
+
+
+.copyrights {
+    text-align: center;
+    margin-top: 80px;
+    color: black;
+}
