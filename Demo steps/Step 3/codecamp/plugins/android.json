@@ -19,7 +19,7 @@
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.codecamp.hybrid"
+            "PACKAGE_NAME": "demo.hybrid.jqm"
         }
     },
     "dependent_plugins": {}

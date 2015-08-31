@@ -40,15 +40,76 @@
         
         <title>Hello World</title>
     </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    <body id="deviceready">
+
+	<!--Splash Page-->
+    <div class="event listening">        
+		Splash Screen		
+    </div>
+    <!--End Splash Page-->
+	
+	<!--Main Content Area-->
+    <section class="event received">
+	
+		<!-- Login Page -->
+		<div data-role="page" id="login-page">
+			<div role="main" class="ui-content">			
+				Login Screen			
+				<div>
+					<a href="" id="login-button" data-transition="none" data-corners="true" data-role="button">Log in</a>
+				</div>
+				
+				<div class="copyrights">
+					Copyright &#169; 2015 99X Technology &#124; Version 1.0.0
+				</div>
+			</div>
+			
+		</div>
+		<!-- End Login Page -->
+		
+		<!--Home Page-->
+		<div data-role="page" id="home-page">
+			<div data-role="header">
+				<a class="header-button" id="open-list-items-button" href="#" data-icon="grid" class="ui-btn-left" data-iconpos="notext" data-transition="none"></a>
+				<h1>Hybrid Mobile Day</h1>
+				<a class="header-button" href="#camera-page" data-icon="camera" class="ui-btn-right" data-iconpos="notext" data-transition="flip"></a>
+			</div>
+			
+			<div data-role="main" class="ui-content">
+			Home Page
+			</div>
+			
+		</div>
+		<!-- End Home Page-->
+		
+		<!--Camera Page-->
+		<div data-role="page" id="camera-page">
+
+		<div data-role="header">
+			<h1>Compello Dev Day</h1>
+			<a class="header-button" href="#home-page" data-icon="home" class="ui-btn-right" data-iconpos="notext" data-transition="flip"></a>
+		</div>
+
+		<div data-role="main" class="ui-content">
+			Camera Page Content			
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h2>&copy; 99X Technology 2015</h2>
+		</div>
+
+		</div>
+		<!--End Camera Page-->
+	
+	</section>
+    <!--End Main Content Area-->
+
+	<!-- scripts -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/vendor/jquery-1.11.1.js"></script>
+    <script src="js/vendor/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
+
+	</body>
 </html>
