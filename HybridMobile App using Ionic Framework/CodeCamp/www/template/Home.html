@@ -1,0 +1,83 @@
+<!--side menu start-->
+<div style="background-color:#F6D8CE;">
+<ion-side-menus >
+    <ion-pane ion-side-menu-content>
+        <ion-nav-view name="menuContent">
+            
+            
+            
+            
+            <!--home page start-->
+            
+            
+            
+            <div class="bar bar-header bar-assertive" ng-controller="GalleryCtrl" >
+                <button class="button button-icon icon ion-navicon" ng-click="toggleLeft()"></button>
+                <h1 class="title" >News</h1>
+                <button class="button button-icon icon ion-android-camera" ng-click="clear('all')"></button>
+            </div>
+            <ion-pane>
+                <ion-content class="row responsive-lg" ng-controller="EventController" >
+                    <div class="row responsive-lg">
+                        <div class="list card col" ng-repeat="item in event">
+
+                                <div class="item">
+                                    <h1 style="text-align: center; background-color:#F78181;" ng-model="input.firstName">{{item.evname}}</h1>
+                                </div>
+                                <h3>About</h3>
+                                <div class="item item-image">
+                                    <img ng-src="img/{{item.evimage}}" style="width: 200px;">
+                                </div>
+                                <p>
+                                    <h2 >Event Discription</h2>
+                                    {{item.evdiscription}}
+                                </p>
+                                <div class="button-bar bar-dark">
+                                       <div ng-controller="ModelController" >
+  <a class="button" ng-click="modal.show()">Event speaker's</a>
+                                    </div>
+                                    <div ng-controller="GalleryCtrl" >
+                                    
+  <a class="button" ng-click="ename(item)">Clips </a>
+                                    </div>
+  
+</div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-pane>
+            <div class="bar bar-footer bar-assertive">
+                <div class="title"><h6>Copyright &#169; 2015 99X Technology &#124; Version 1.0.0</h6></div>
+            </div>
+            <!--home page end-->
+        </ion-nav-view>
+    </ion-pane>
+    <ion-side-menu side="left" style="background-color: #ecf0f1;">
+        <header class="bar bar-header bar-assertive">
+            <h1 class="title">Menu</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-nav-view>
+            <div ng-controller="instantSearchCtrl">
+                <div class="bar item-input-inset">
+                    <label class="item-input-wrapper">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" class="search " ng-model="searchString" placeholder="Search" />
+                </label>
+                </div>
+                <div class="list" ng-controller="SpeakerController" >
+                    <a ng-repeat="it in items | searchFor:searchString" class="item" ng-click="devlop(it)">
+                         {{it.title}}
+                    </a>
+                </div>
+            </div><br>
+             <a href="#" class="item item-icon-right" ui-sref="Login">
+                    Logout
+                 <i class="icon ion-log-out"></i>
+             </a>
+            </ion-nav-view>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+</div>
+<!--side menu end-->
