@@ -1,0 +1,21 @@
+<div class="modal  responsive-lg">
+    <ion-header-bar class="bar-assertive">
+        <h1 class="title" style="text-align: center;">Speakers</h1>
+    </ion-header-bar>
+    <ion-content ng-controller="SpeakersCtrl" >
+        <div class="list card">
+            
+              <div ng-repeat="spkr in speakers" >
+                <h2>{{spkr.name}}</h2>
+                <img class="full-image" src="{{spkr.image}}">
+          
+            
+        <a><h5>@{{spkr.twitter}}</h5></a>
+                </div>
+            </div>
+      
+        <button class="button button-full button-assertive" ng-click="modal.hide()">
+            Ok
+        </button>
+    </ion-content>
+</div>

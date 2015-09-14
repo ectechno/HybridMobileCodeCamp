@@ -1,0 +1,75 @@
+<ion-side-menus>
+  <ion-pane ion-side-menu-content>
+    <ion-nav-view name="menuContent">
+      <div class="bar bar-header bar-assertive" ng-controller="HomeCtrl">
+        <button class="button button-icon icon ion-navicon" ng-click="toggleLeft()"></button>
+        <h1 class="title">E v e n t s</h1>
+        <button class="button button-icon icon ion-android-camera" ng-click="clear('all')"></button>
+      </div>
+      <ion-content class="row responsive-lg">
+        <div class="row responsive-lg" style="text-align:center; margin-top:50px;>
+            <div class=" list list-inset ">
+  <label class="item item-input ">
+    <i class="icon ion-search placeholder-icon "></i>
+    <input type="text " placeholder="Search Events near you.. ">
+  </label>
+   </div>
+    <div class="list card ">
+            <div class="item item-avatar ">
+              <img src="img/propic.jpg ">
+              <h2>Hybrid Mobile App Workshop</h2>
+              <p>July 03, 2015</p>
+            </div>
+            <div class="item item-body ">
+              <img class="full-image " src="img/event.png ">
+              <p>This is a hands-on training workshop conducted by 99X Technology on Hybrid Mobile Application Development</p>
+              <p> 
+                <div ng-controller="SpeakersCtrl " >                        
+                  <button class="button button-small button-outline button-assertive ion-android-people " ng-click="modal.show() ">
+                    Speakers Details </button>
+                 </div>
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left ">
+              <a class="tab-item " href="https://www.facebook.com/events/835590606509133/ ">
+      <i class="ion-social-facebook "></i>
+     Facebook Event
+    </a>
+              <a class="tab-item " href="https://twitter.com/NSBMDevOps ">
+      <i class="ion-social-twitter "></i>
+      Twitter Page
+    </a>
+         <a class="tab-item " href="https://twitter.com/NSBMDevOps ">
+      <i class="ion-image "></i>
+      Gallery
+    </a>  
+  </div>
+          </div>
+          </div>
+        </ion-content>
+          <div class="bar bar-footer bar-assertive ">
+            <div class="title ">
+              <h6>&copy; 99X Technology 2015</h6>
+            </div>
+          </div>
+    </ion-nav-view>
+    </ion-pane>
+    <ion-side-menu side="left " style="background-color: #ecf0f1; ">
+      <ion-content>
+        <ion-nav-view>
+          <div ng-controller="instantSearchCtrl ">
+            <div class="bar item-input-inset ">
+              <label class="item-input-wrapper ">
+                <i class="icon ion-search placeholder-icon "></i>
+                <input type="text " class="search " ng-model="searchString " placeholder="Search " />
+              </label>
+            </div>
+            <div class="list " ng-controller="DeveloperCtrl ">
+              <a ng-repeat="it in items | searchFor:searchString " class="item " ng-click="devlop(it) ">
+                         {{it.title}}
+                    </a>
+            </div>
+          </div>
+        </ion-nav-view>
+      </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
