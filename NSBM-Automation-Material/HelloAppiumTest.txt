@@ -1,0 +1,92 @@
+import io.appium.java_client.AppiumDriver;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+
+public class HelloAppiumTest {
+	
+	protected AppiumDriver driver;
+  
+  @BeforeTest
+  public void setUp() 
+  {
+	  
+	  try {
+		  
+	  File classPathRoot = new File(System.getProperty("user.dir"));
+	  File appDir = new File(classPathRoot,"Applications");
+	  File app = new File(appDir, "android-debug.apk");
+	  
+	  DesiredCapabilities capabilities = new DesiredCapabilities();
+	    capabilities.setCapability("automationName", "Appium");
+	    capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("deviceName", "Android Emulator");	
+		capabilities.setCapability("avd", "NexusOneAvd");
+		capabilities.setCapability("app", app.getAbsolutePath());
+		
+		capabilities.setCapability("appPackage", "com.codecamp.hybrid");
+		capabilities.setCapability("appActivity", "com.codecamp.hybrid.MainActivity");
+		
+		
+			driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+			
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+  }
+  
+  @Test
+  public void LoginTest() {
+	  
+	  	String userName = "admin";
+		String password = "pass@123";
+		
+		Set<String> contextNames = driver.getContextHandles();
+		for (String contextName : contextNames) {
+			System.out.println(contextName); 
+			}
+		
+		
+		driver.context("WEBVIEW_com.codecamp.hybrid");
+		driver.findElement(By.id("login-username")).sendKeys(userName);
+		driver.findElement(By.id("login-password")).sendKeys(password);
+		driver.findElement(By.id("login-button")).click();
+		
+		try {
+		    Thread.sleep(7000);                 //1000 milliseconds is one second.
+		} catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}
+		
+		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='home-page']/div[1]/div[1]/h1")).getText().trim(), "Compello Dev Day");
+		driver.findElement(By.id("open-list-items-button")).click();
+		
+		// click on Rashmika
+		driver.findElement(By.xpath("//*[@id='left-panel']/div/div/ul/li[6]/a")).click();
+		
+		
+		driver.findElement(By.xpath("//*[@id='developer-selected-popup']/div/a")).click();
+		
+		
+  }
+
+  @AfterTest
+  public void afterTest() {
+	  
+	  driver.quit();
+  }
+
+}

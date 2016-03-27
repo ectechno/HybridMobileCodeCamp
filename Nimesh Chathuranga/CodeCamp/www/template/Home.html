@@ -1,0 +1,76 @@
+<!--side menu start-->
+<ion-side-menus >
+    <ion-pane ion-side-menu-content>
+        <ion-nav-view name="menuContent">
+            <!--home page start-->
+            <div class="bar bar-header bar-dark" ng-controller="GalleryCtrl" >
+                <button class="button button-icon icon ion-navicon" ng-click="toggleLeft()"></button>
+                <h1 class="title" >EVENT</h1>
+                <button class="button button-icon icon ion-android-camera" ng-click="clear('all')"></button>
+            </div>
+            <ion-pane>
+                <ion-content class="row responsive-lg" ng-controller="EventController" >
+                    <div class="row responsive-lg">
+                        <div class="list card col" ng-repeat="item in event">
+
+                                <div class="item">
+                                    <h1 style="text-align: center; background-color:#1abc9c;" ng-model="input.firstName">{{item.evname}}</h1>
+                                </div>
+                                <h3>Event Location</h3>
+                                <div class="item item-image">
+                                    <img ng-src="img/{{item.evimage}}" style="width: 200px;">
+                                </div>
+                                <p>
+                                    <h2 >Event Discription</h2>
+                                    {{item.evdiscription}}
+                                </p>
+                                <p >
+                                    <div ng-controller="ModelController" >
+                                        <button class="button button-small button-outline button-balanced" ng-click="modal.show()">
+                                            Event speaker's Details
+                                        </button>
+                                     </div>
+                                </p>
+                                    <div ng-controller="GalleryCtrl" >
+                                    <button class="button button-small button-outline button-balanced" ng-click="ename(item)">
+                                        Gallery
+                                    </button>
+                                    </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-pane>
+            <div class="bar bar-footer bar-positive">
+                <div class="title"><h6>Copyright &#169; 2015 99X Technology &#124; Version 1.0.0</h6></div>
+            </div>
+            <!--home page end-->
+        </ion-nav-view>
+    </ion-pane>
+    <ion-side-menu side="left" style="background-color: #ecf0f1;">
+        <header class="bar bar-header bar-assertive">
+            <h1 class="title">Menu</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-nav-view>
+            <div ng-controller="instantSearchCtrl">
+                <div class="bar item-input-inset">
+                    <label class="item-input-wrapper">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" class="search " ng-model="searchString" placeholder="Search" />
+                </label>
+                </div>
+                <div class="list" ng-controller="SpeakerController" >
+                    <a ng-repeat="it in items | searchFor:searchString" class="item" ng-click="devlop(it)">
+                         {{it.title}}
+                    </a>
+                </div>
+            </div><br>
+             <a href="#" class="item item-icon-right" ui-sref="Login">
+                    Logout
+                 <i class="icon ion-log-out"></i>
+             </a>
+            </ion-nav-view>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+<!--side menu end-->

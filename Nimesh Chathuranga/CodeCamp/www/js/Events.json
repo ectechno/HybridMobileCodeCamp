@@ -1,0 +1,17 @@
+[
+  {
+    "evname" 		 : "Code Camp",
+    "evdiscription"	 : "Hybrid Mobile Application Development Workshop.",
+    "evimage"        :"location.png"
+  },
+  {
+    "evname" 		 : "Inversion 15‬",
+    "evdiscription"	 : "A seminar on IoT Technologies and Opportunities which is organized by NSBM DevOps in collaboration with Virtusa.",
+    "evimage"        :"location.png"
+  },
+  {
+    "evname" 		 : "Ideamart",
+    "evdiscription"	 : "Ideamart team will be conducting an interactive workshop on Dialog API on 17th Monday 9 am to 12 pm at NSBM, School of Computing.",
+    "evimage"        :"location.png"
+  }
+]
